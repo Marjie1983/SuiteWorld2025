@@ -62,7 +62,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 1rem; /* Added gap for spacing */
+            gap: 1rem;
             padding: 0.75rem 1rem;
             margin-bottom: 1rem;
             background: rgba(10, 16, 31, 0.7);
@@ -78,154 +78,49 @@
             font-weight: bold;
             opacity: 0.95;
             transition: opacity 0.2s, color 0.2s;
-            white-space: nowrap; /* Prevent logos from wrapping */
+            white-space: nowrap;
         }
         .logo a:hover {
             opacity: 1;
             color: var(--brand-green);
         }
 
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.4rem;
-            font-weight: 700;
-            color: var(--brand-cyan);
-        }
-
-        header p {
-            opacity: 0.95;
-            font-size: 1rem;
-            color: var(--light-grey-text);
-        }
+        header h1 { font-size: 2rem; margin-bottom: 0.4rem; font-weight: 700; color: var(--brand-cyan); }
+        header p { opacity: 0.95; font-size: 1rem; color: var(--light-grey-text); }
         
-        /* --- NEW: Search Bar Styles --- */
-        .search-container {
-            width: 100%;
-            max-width: 400px; /* Limit search bar width */
-        }
-
-        #universalSearchInput {
-            width: 100%;
-            padding: 0.6rem 1rem;
-            background-color: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-
-        #universalSearchInput:focus {
-            outline: none;
-            border-color: var(--brand-cyan);
-            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
-        }
-
-        #universalSearchInput::placeholder {
-            color: var(--text-secondary);
-        }
+        .search-container { width: 100%; max-width: 400px; }
+        #universalSearchInput { width: 100%; padding: 0.6rem 1rem; background-color: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 8px; color: var(--text-primary); font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s; }
+        #universalSearchInput:focus { outline: none; border-color: var(--brand-cyan); box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2); }
+        #universalSearchInput::placeholder { color: var(--text-secondary); }
         
-        /* --- NEW: Highlight Style for Search Results --- */
-        .search-highlight {
-            background-color: var(--brand-green);
-            color: var(--off-black);
-            border-radius: 3px;
-            padding: 0 2px;
-        }
+        .search-highlight { background-color: var(--brand-green); color: var(--off-black); border-radius: 3px; padding: 0 2px; }
 
-        .status-banner {
-            background: var(--brand-green);
-            color: var(--off-black);
-            padding: 0.6rem 1rem;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.95rem;
-            flex-shrink: 0;
-        }
+        .status-banner { background: var(--brand-green); color: var(--off-black); padding: 0.6rem 1rem; text-align: center; font-weight: 600; font-size: 0.95rem; flex-shrink: 0; }
 
-        .main-content {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            flex-grow: 1;
-            min-height: 0;
-        }
+        .main-content { display: grid; grid-template-columns: 280px 1fr; flex-grow: 1; min-height: 0; }
 
-        .sidebar {
-            background: var(--dark-card);
-            border-right: 1px solid var(--dark-border);
-            padding: 1.5rem 0.5rem;
-            overflow-y: auto;
-            flex-shrink: 0;
-        }
+        .sidebar { background: var(--dark-card); border-right: 1px solid var(--dark-border); padding: 1.5rem 0.5rem; overflow-y: auto; flex-shrink: 0; }
 
         .nav-section { margin-bottom: 1.5rem; }
+        .nav-title { font-weight: 700; color: var(--brand-green); margin-bottom: 0.75rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.8px; padding: 0 1rem; }
+        .nav-item { display: block; padding: 0.7rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: 8px; transition: all 0.2s ease-in-out; margin-bottom: 0.25rem; font-size: 0.95rem; font-weight: 500; border-left: 3px solid transparent; cursor: pointer; }
+        .nav-item:hover, .nav-item.active { background: var(--dark-purple-accent); color: var(--brand-cyan); border-left: 3px solid var(--brand-green); transform: translateX(5px); }
 
-        .nav-title {
-            font-weight: 700;
-            color: var(--brand-green);
-            margin-bottom: 0.75rem;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 0 1rem;
-        }
+        .content-area { padding: 2.5rem; overflow-y: auto; background: var(--dark-bg); }
 
-        .nav-item {
-            display: block;
-            padding: 0.7rem 1rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.2s ease-in-out;
-            margin-bottom: 0.25rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border-left: 3px solid transparent;
-            cursor: pointer;
-        }
-
-        .nav-item:hover, .nav-item.active {
-            background: var(--dark-purple-accent);
-            color: var(--brand-cyan);
-            border-left: 3px solid var(--brand-green);
-            transform: translateX(5px);
-        }
-
-        .content-area {
-            padding: 2.5rem;
-            overflow-y: auto;
-            background: var(--dark-bg);
-        }
-
-        .content-section {
-            display: none;
-            animation: fadeIn 0.5s ease-out;
-        }
-
+        .content-section { display: none; animation: fadeIn 0.5s ease-out; }
         .content-section.active { display: block; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .section-title {
-            font-size: 2.2rem;
-            color: var(--brand-green);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 4px solid var(--brand-green);
-        }
-
+        .section-title { font-size: 2.2rem; color: var(--brand-green); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 4px solid var(--brand-green); }
         .card { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); color: var(--light-grey-text); }
         .card-title { font-size: 1.4rem; color: var(--brand-cyan); margin-bottom: 1rem; font-weight: 600; }
         .card ul { padding-left: 20px; line-height: 1.6; color: var(--text-secondary); }
         .card h4 { color: var(--text-primary); margin-top: 1rem; margin-bottom: 0.5rem; }
-        
         .highlight-box { background-image: var(--brand-gradient); color: white; padding: 2rem; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: none; }
         .highlight-box h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-shadow: none; color: white; }
         .highlight-box p, .highlight-box li { font-size: 1rem; opacity: 1; line-height: 1.6; color: white; }
-        
         .pitch-card { background: var(--dark-purple-accent); border-left: 5px solid var(--brand-cyan); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 0 8px 8px 0; color: var(--light-grey-text); }
         .persona-badge { display: inline-block; padding: 0.3rem 0.8rem; background-image: var(--brand-gradient); color: white; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
         .do-dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
@@ -261,8 +156,8 @@
             .section-title { font-size: 1.8rem; }
             .do-dont-grid { grid-template-columns: 1fr; }
             header { position: static; }
-            .branding-bar { flex-wrap: wrap; } /* Allow wrapping on mobile */
-            .search-container { max-width: 100%; order: 3; margin-top: 1rem; } /* Move search to bottom on mobile */
+            .branding-bar { flex-wrap: wrap; }
+            .search-container { max-width: 100%; order: 3; margin-top: 1rem; }
             header h1 { font-size: 1.8rem; }
             header p { font-size: 1rem; }
         }
@@ -289,10 +184,114 @@
         
         <div class="main-content">
             <nav class="sidebar">
-                 </nav>
+                <div class="nav-section">
+                    <div class="nav-title">Event Intelligence</div>
+                    <a href="#" class="nav-item active" data-section-id="executive-brief">📋 Executive Brief</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Essentials</div>
+                    <a href="#" class="nav-item" data-section-id="quick-start">⚡ Quick Start</a>
+                    <a href="#" class="nav-item" data-section-id="ecosystem">🌐 Ecosystem Strategy</a>
+                    <a href="#" class="nav-item" data-section-id="messaging">📢 Core Messaging</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Personas</div>
+                     <a href="#" class="nav-item" data-section-id="personas">🎯 Persona Intelligence</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Conversations</div>
+                    <a href="#" class="nav-item" data-section-id="pitches">💬 Elevator Pitches</a>
+                    <a href="#" class="nav-item" data-section-id="objections">🛡️ Objection Handlers</a>
+                    <a href="#" class="nav-item" data-section-id="discovery">🔍 Discovery Questions</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Competition & Partners</div>
+                    <a href="#" class="nav-item" data-section-id="competitors">⚔️ Battle Cards</a>
+                    <a href="#" class="nav-item" data-section-id="partners">🤝 Partner Talk Tracks</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Demos & Execution</div>
+                    <a href="#" class="nav-item" data-section-id="demos">🎬 Demo Flows</a>
+                    <a href="#" class="nav-item" data-section-id="value">💰 Value & ROI</a>
+                    <a href="#" class="nav-item" data-section-id="closing">✨ Closing Strategies</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">AI & Reference</div>
+                    <a href="#" class="nav-item" data-section-id="luminiq">🤖 LuminIQ & AI</a>
+                    <a href="#" class="nav-item" data-section-id="soundbites">💡 Key Soundbites</a>
+                    <a href="#" class="nav-item" data-section-id="metrics">📊 Success Metrics</a>
+                </div>
+            </nav>
             
             <main class="content-area">
-                </main>
+                <section id="executive-brief" class="content-section active">
+                    <h2 class="section-title">📋 Executive Brief: SuiteWorld 2025 Intelligence</h2>
+                    <div class="card">
+                        <h3 class="card-title">⚡ Critical Intelligence for Returning Reps</h3>
+                        <p>NetSuite's 2025.1 release changes everything. They've added vendor management capabilities that create the perfect foundation for our intelligence layer. This is our moment to shine as their essential partner.</p>
+                    </div>
+                    </section>
+                
+                <section id="quick-start" class="content-section">
+                    <h2 class="section-title">⚡ Quick Start Guide</h2>
+                    </section>
+                
+                <section id="ecosystem" class="content-section">
+                    <h2 class="section-title">🌐 Ecosystem Strategy</h2>
+                    </section>
+                
+                <section id="messaging" class="content-section">
+                    <h2 class="section-title">📢 Core Messaging</h2>
+                    </section>
+
+                <section id="personas" class="content-section">
+                    <h2 class="section-title">🎯 Persona Intelligence</h2>
+                    </section>
+                
+                <section id="pitches" class="content-section">
+                    <h2 class="section-title">💬 Elevator Pitches</h2>
+                    </section>
+
+                <section id="objections" class="content-section">
+                    <h2 class="section-title">🛡️ Objection Handlers</h2>
+                    </section>
+
+                <section id="discovery" class="content-section">
+                    <h2 class="section-title">🔍 Discovery Questions</h2>
+                    </section>
+
+                <section id="competitors" class="content-section">
+                    <h2 class="section-title">⚔️ Competitive Battle Cards</h2>
+                    </section>
+
+                <section id="partners" class="content-section">
+                    <h2 class="section-title">🤝 Partner Talk Tracks</h2>
+                    </section>
+
+                <section id="demos" class="content-section">
+                    <h2 class="section-title">🎬 Demo Flows</h2>
+                    </section>
+
+                <section id="value" class="content-section">
+                    <h2 class="section-title">💰 Value & ROI</h2>
+                    </section>
+
+                <section id="closing" class="content-section">
+                    <h2 class="section-title">✨ Closing Strategies</h2>
+                    </section>
+
+                <section id="luminiq" class="content-section">
+                    <h2 class="section-title">🤖 LuminIQ & AI Intelligence</h2>
+                    </section>
+
+                <section id="soundbites" class="content-section">
+                    <h2 class="section-title">💡 Key Soundbites</h2>
+                    </section>
+
+                <section id="metrics" class="content-section">
+                    <h2 class="section-title">📊 Success Metrics & Targets</h2>
+                    </section>
+            </main>
         </div>
     </div>
     
@@ -327,48 +326,40 @@
                 });
             });
 
-            // --- NEW: Universal Search Logic ---
-            let originalContent = new Map();
-            contentSections.forEach(section => {
-                originalContent.set(section.id, section.innerHTML);
-            });
+            // --- REWRITTEN & FIXED: Universal Search Logic ---
+            function unhighlight() {
+                const highlighted = document.querySelectorAll('mark.search-highlight');
+                highlighted.forEach(el => {
+                    // Replace the <mark> tag with its text content
+                    const parent = el.parentNode;
+                    parent.replaceChild(document.createTextNode(el.textContent), el);
+                    parent.normalize(); // Merges adjacent text nodes
+                });
+            }
 
             function performSearch() {
+                unhighlight();
                 const searchTerm = searchInput.value.trim();
-
-                // Restore original content to clear previous highlights
-                originalContent.forEach((html, id) => {
-                    document.getElementById(id).innerHTML = html;
-                });
-                
-                if (searchTerm.length < 2) { // Only search for 2+ characters
-                    return;
-                }
+                if (searchTerm.length < 2) return;
 
                 const regex = new RegExp(searchTerm, 'gi');
                 let firstMatchSectionId = null;
 
                 contentSections.forEach(section => {
-                    const originalHTML = originalContent.get(section.id);
-                    let matchFound = false;
-
-                    // A more robust way to highlight, avoiding breaking HTML attributes
                     const textNodes = getTextNodes(section);
-                    textNodes.forEach(node => {
-                        const parent = node.parentNode;
-                        if (parent.nodeName === 'SCRIPT' || parent.nodeName === 'STYLE') return;
-                        const content = node.textContent;
-                        const matches = content.match(regex);
+                    let sectionHasMatch = false;
 
-                        if (matches) {
-                            matchFound = true;
+                    textNodes.forEach(node => {
+                        const content = node.textContent;
+                        if (regex.test(content)) {
+                            sectionHasMatch = true;
                             const newHTML = content.replace(regex, match => `<mark class="search-highlight">${match}</mark>`);
                             const newFragment = document.createRange().createContextualFragment(newHTML);
-                            parent.replaceChild(newFragment, node);
+                            node.parentNode.replaceChild(newFragment, node);
                         }
                     });
-
-                    if (matchFound && !firstMatchSectionId) {
+                    
+                    if (sectionHasMatch && !firstMatchSectionId) {
                         firstMatchSectionId = section.id;
                     }
                 });
@@ -378,24 +369,25 @@
                 }
             }
             
-            // Helper function to get all text nodes within an element
             function getTextNodes(element) {
                 const nodes = [];
                 const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
                 let node;
                 while(node = walker.nextNode()) {
-                    nodes.push(node);
+                    if (node.parentNode.nodeName !== 'SCRIPT' && node.parentNode.nodeName !== 'STYLE') {
+                         nodes.push(node);
+                    }
                 }
                 return nodes;
             }
 
             searchInput.addEventListener('input', performSearch);
-            // --- End of New Search Logic ---
+            // --- End of Search Logic ---
 
             showContentSection('executive-brief');
         });
 
-        // Tab functionality (no changes needed)
+        // Tab functionality for components like Pitches
         function showTab(tabId, button) {
             const parent = button.closest('.content-section');
             parent.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
