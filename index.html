@@ -8,47 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Base Styles & NEW On-Brand Variables --- */
         :root {
-            --brand-green: #34d399; /* Vibrant green from banner */
-            --brand-cyan: #22d3ee;  /* Vibrant cyan/blue from banner */
-            --brand-gradient: linear-gradient(90deg, #f59e0b, #ef4444, #ec4899, #8b5cf6, #3b82f6, #10b981); /* Gatekeeper Logo Gradient */
+            --brand-green: #34d399;
+            --brand-cyan: #22d3ee;
+            --brand-gradient: linear-gradient(90deg, #f59e0b, #ef4444, #ec4899, #8b5cf6, #3b82f6, #10b981);
             --danger: #ef4444;
             --warning: #f59e0b;
-
-            /* Core Dark Theme Colors */
-            --dark-bg: #0a101f;     /* Deep navy background */
-            --dark-card: #111827;   /* Slightly lighter card background */
-            --dark-border: #374151; /* Subtle border color */
-
-            /* New Accent Colors for Readability and Contrast */
-            --dark-purple-accent: #1e1b4b; /* Deeper, rich purple-blue for contrast */
-            --dark-blue-accent: #1e3a8a;   /* Deep blue, also for contrast */
-            --off-black: #0c0c0c;          /* Very dark grey for high contrast blocks */
-            --light-grey-text: #e2e8f0;    /* Lighter text for better contrast on darker backgrounds */
-
-            --text-primary: #f9fafb;/* Off-white for main text */
-            --text-secondary: #9ca3af;/* Gray for secondary text */
-
+            --dark-bg: #0a101f;
+            --dark-card: #111827;
+            --dark-border: #374151;
+            --dark-purple-accent: #1e1b4b;
+            --dark-blue-accent: #1e3a8a;
+            --off-black: #0c0c0c;
+            --light-grey-text: #e2e8f0;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
             --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-sans);
             background: var(--dark-bg);
             color: var(--text-primary);
-            overflow: hidden; /* Prevent body scroll */
+            overflow: hidden;
             height: 100vh;
         }
 
-        /* --- App Container --- */
         .app-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -58,9 +45,8 @@
             flex-direction: column;
         }
 
-        /* --- Header --- */
         header {
-            background-image: url('SuiteWorld Banner 2.jpg'); /* Ensure this path is correct */
+            background-image: url('SuiteWorld Banner 2.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -78,41 +64,41 @@
             align-items: center;
             padding: 0.75rem 1rem;
             margin-bottom: 1rem;
-            background: rgba(10, 16, 31, 0.7); /* Slightly more opaque for readability */
-            backdrop-filter: blur(4px); /* Slightly less blur */
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Stronger border */
+            background: rgba(10, 16, 31, 0.7);
+            backdrop-filter: blur(4px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
         }
 
         .logo a {
-            color: var(--text-primary); /* Use primary text color for better contrast */
+            color: var(--text-primary);
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
-            opacity: 0.95; /* More opaque */
-            transition: opacity 0.2s;
+            opacity: 0.95;
+            transition: opacity 0.2s, color 0.2s;
         }
         .logo a:hover {
             opacity: 1;
-            color: var(--brand-green); /* Hover color for better feedback */
+            color: var(--brand-green);
         }
 
         header h1 {
-            font-size: 2rem; /* Slightly larger for impact */
+            font-size: 2rem;
             margin-bottom: 0.4rem;
             font-weight: 700;
-            color: var(--brand-cyan); /* Use cyan for main title */
+            color: var(--brand-cyan);
         }
 
         header p {
-            opacity: 0.95; /* More opaque */
+            opacity: 0.95;
             font-size: 1rem;
-            color: var(--light-grey-text); /* Use lighter grey for better contrast */
+            color: var(--light-grey-text);
         }
 
         .status-banner {
             background: var(--brand-green);
-            color: var(--off-black); /* Very dark text for high contrast */
+            color: var(--off-black);
             padding: 0.6rem 1rem;
             text-align: center;
             font-weight: 600;
@@ -120,7 +106,6 @@
             flex-shrink: 0;
         }
 
-        /* --- Main Layout --- */
         .main-content {
             display: grid;
             grid-template-columns: 280px 1fr;
@@ -128,18 +113,15 @@
             min-height: 0;
         }
 
-        /* --- Sidebar Navigation --- */
         .sidebar {
-            background: var(--dark-card); /* Sidebar slightly lighter than main bg */
+            background: var(--dark-card);
             border-right: 1px solid var(--dark-border);
-            padding: 1.5rem 0.5rem; /* Adjusted padding */
-            overflow-y: auto; /* Allow sidebar to scroll */
+            padding: 1.5rem 0.5rem;
+            overflow-y: auto;
             flex-shrink: 0;
         }
 
-        .nav-section {
-            margin-bottom: 1.5rem;
-        }
+        .nav-section { margin-bottom: 1.5rem; }
 
         .nav-title {
             font-weight: 700;
@@ -148,7 +130,7 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            padding: 0 1rem; /* Padding to align with items */
+            padding: 0 1rem;
         }
 
         .nav-item {
@@ -162,32 +144,28 @@
             font-size: 0.95rem;
             font-weight: 500;
             border-left: 3px solid transparent;
+            cursor: pointer;
         }
 
         .nav-item:hover, .nav-item.active {
-            background: var(--dark-purple-accent); /* Use new accent color for active/hover */
-            color: var(--brand-cyan); /* Stronger color for active text */
+            background: var(--dark-purple-accent);
+            color: var(--brand-cyan);
             border-left: 3px solid var(--brand-green);
             transform: translateX(5px);
         }
 
-        /* --- Content Area - Holds the individual sections --- */
         .content-area {
             padding: 2.5rem;
-            overflow-y: auto; /* This is the only scrolling part */
-            background: var(--dark-bg); /* Base background for the content area */
+            overflow-y: auto;
+            background: var(--dark-bg);
         }
 
-        /* Each content section is hidden by default and shown via JS */
         .content-section {
-            display: none; /* Hidden by default */
-            margin-bottom: 3rem;
-            animation: fadeIn 0.5s ease-out; /* Smooth fade-in effect */
+            display: none;
+            animation: fadeIn 0.5s ease-out;
         }
 
-        .content-section.active {
-            display: block; /* Shown when active */
-        }
+        .content-section.active { display: block; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -202,203 +180,45 @@
             border-bottom: 4px solid var(--brand-green);
         }
 
-        /* --- Reusable Card Component - Enhanced for Contrast --- */
-        .card {
-            background: var(--dark-card); /* Default card background */
-            border: 1px solid var(--dark-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            color: var(--light-grey-text); /* Ensure good text contrast */
-        }
-
-        .card-title {
-            font-size: 1.4rem;
-            color: var(--brand-cyan);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .card ul {
-            padding-left: 20px;
-            line-height: 1.6;
-            color: var(--text-secondary); /* Still good contrast for lists */
-        }
-        .card h4 {
-            color: var(--text-primary); /* Ensure headings pop */
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-
-        /* --- Specialized Card Styles - Using new accent colors --- */
-        .highlight-box {
-            background-image: var(--brand-gradient);
-            color: var(--off-black); /* Dark text on gradient for better readability */
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            border: none;
-        }
-        .highlight-box h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-shadow: none; color: white; /* White text on gradient is fine */ }
-        .highlight-box p, .highlight-box li { font-size: 1rem; opacity: 1; line-height: 1.6; color: var(--off-black); /* Dark text on gradient */ }
-
-
-        .pitch-card {
-            background: var(--dark-purple-accent); /* Use dark purple for pitch cards */
-            border-left: 5px solid var(--brand-cyan);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 0 8px 8px 0;
-            color: var(--light-grey-text); /* Good contrast */
-        }
-
-        .persona-badge {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background-image: var(--brand-gradient);
-            color: white; /* White text on gradient */
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .do-dont-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .do-box, .dont-box {
-            padding: 1.5rem;
-            border-radius: 12px;
-            color: var(--text-primary); /* Ensure text is visible */
-        }
-        .do-box { background: rgba(52, 211, 153, 0.2); border: 2px solid var(--brand-green); } /* Slightly more opaque */
-        .dont-box { background: rgba(239, 68, 68, 0.2); border: 2px solid var(--danger); } /* Slightly more opaque */
+        .card { background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); color: var(--light-grey-text); }
+        .card-title { font-size: 1.4rem; color: var(--brand-cyan); margin-bottom: 1rem; font-weight: 600; }
+        .card ul { padding-left: 20px; line-height: 1.6; color: var(--text-secondary); }
+        .card h4 { color: var(--text-primary); margin-top: 1rem; margin-bottom: 0.5rem; }
+        .highlight-box { background-image: var(--brand-gradient); color: var(--off-black); padding: 2rem; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 8px 30px rgba(0,0,0,0.3); border: none; }
+        .highlight-box h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-shadow: none; color: white; }
+        .highlight-box p, .highlight-box li { font-size: 1rem; opacity: 1; line-height: 1.6; color: white; } /* Adjusted for better contrast */
+        .pitch-card { background: var(--dark-purple-accent); border-left: 5px solid var(--brand-cyan); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 0 8px 8px 0; color: var(--light-grey-text); }
+        .persona-badge { display: inline-block; padding: 0.3rem 0.8rem; background-image: var(--brand-gradient); color: white; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
+        .do-dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+        .do-box, .dont-box { padding: 1.5rem; border-radius: 12px; color: var(--text-primary); }
+        .do-box { background: rgba(52, 211, 153, 0.2); border: 2px solid var(--brand-green); }
+        .dont-box { background: rgba(239, 68, 68, 0.2); border: 2px solid var(--danger); }
         .do-box h4, .dont-box h4 { margin-bottom: 0.5rem; color: var(--text-primary); }
-        .do-box ul, .dont-box ul { padding-left: 20px; color: var(--light-grey-text);} /* Lighter text for lists */
-
-        .objection-handler {
-            background: var(--dark-blue-accent); /* Use dark blue for handlers */
-            border-left: 5px solid var(--warning);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            color: var(--light-grey-text); /* Good contrast */
-        }
+        .do-box ul, .dont-box ul { padding-left: 20px; color: var(--light-grey-text);}
+        .objection-handler { background: var(--dark-blue-accent); border-left: 5px solid var(--warning); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; color: var(--light-grey-text); }
         .objection-handler h4 { color: var(--warning); margin-bottom: 0.5rem; }
+        .competitor-card { background: var(--dark-card); border: 2px solid var(--dark-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; color: var(--light-grey-text); }
+        .counter-strategy { background: var(--off-black); color: var(--brand-cyan); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-weight: 600; border: 1px solid var(--dark-border); }
+        .discovery-question { background: var(--dark-purple-accent); border-left: 4px solid var(--brand-cyan); padding: 1rem; margin-bottom: 0.5rem; border-radius: 4px; color: var(--light-grey-text); }
+        .soundbite { background-image: var(--brand-gradient); color: white; padding: 1rem 1.5rem; border-radius: 12px; margin: 0.5rem 0; font-style: italic; text-align: center; font-weight: 500; }
+        .tab-container { display: flex; flex-wrap: wrap; border-bottom: 2px solid var(--dark-border); margin-bottom: 1.5rem; }
+        .tab-button { background: none; border: none; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; position: relative; transition: all 0.3s; }
+        .tab-button:hover, .tab-button.active { color: var(--brand-green); }
+        .tab-button.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 3px; background: var(--brand-green); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .metric-card { background: var(--dark-blue-accent); border: 1px solid var(--dark-border); color: var(--light-grey-text); padding: 1.5rem; border-radius: 12px; text-align: center; }
+        .metric-number { font-size: 2.2rem; font-weight: bold; margin-bottom: 0.5rem; color: var(--brand-green); }
+        .metric-label { font-size: 0.9rem; color: var(--text-secondary); }
 
-        .competitor-card {
-            background: var(--dark-card); /* Keep competitor cards slightly darker */
-            border: 2px solid var(--dark-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--light-grey-text);
-        }
-
-        .counter-strategy {
-            background: var(--off-black); /* Very dark background for counter strategies */
-            color: var(--brand-cyan);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-weight: 600;
-            border: 1px solid var(--dark-border);
-        }
-
-        .discovery-question {
-            background: var(--dark-purple-accent); /* Dark purple for discovery questions */
-            border-left: 4px solid var(--brand-cyan);
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-            border-radius: 4px;
-            color: var(--light-grey-text); /* Good contrast */
-        }
-
-        .soundbite {
-            background-image: var(--brand-gradient);
-            color: var(--off-black); /* Dark text on gradient for better readability */
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            margin: 0.5rem 0;
-            font-style: italic;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        /* --- Tabs for Pitches --- */
-        .tab-container {
-            display: flex;
-            flex-wrap: wrap;
-            border-bottom: 2px solid var(--dark-border);
-            margin-bottom: 1.5rem;
-        }
-
-        .tab-button {
-            background: none;
-            border: none;
-            padding: 1rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            cursor: pointer;
-            position: relative;
-            transition: all 0.3s;
-        }
-        .tab-button:hover { color: var(--brand-green); }
-        .tab-button.active { color: var(--brand-green); }
-        .tab-button.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--brand-green);
-        }
-        
-        .metric-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .metric-card {
-            background: var(--dark-blue-accent); /* Dark blue accent for metrics */
-            border: 1px solid var(--dark-border);
-            color: var(--light-grey-text); /* Good contrast */
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-        }
-        
-        .metric-number {
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--brand-green);
-        }
-        
-        .metric-label {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        /* --- Mobile Responsiveness --- */
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             body { overflow: auto; height: auto; }
             .app-container { height: auto; }
             .main-content { grid-template-columns: 1fr; }
-            .sidebar { display: none; } /* Hide sidebar on small screens */
-            .content-area { padding: 1.5rem; overflow-y: visible; } /* Content area will scroll if needed */
-            .content-section { display: block; } /* All sections visible and scrollable on mobile */
+            .sidebar { display: none; }
+            .content-area { padding: 1.5rem; overflow-y: visible; }
+            .content-section { display: block; }
             .section-title { font-size: 1.8rem; }
             .do-dont-grid { grid-template-columns: 1fr; }
             header { position: static; }
@@ -428,40 +248,40 @@
             <nav class="sidebar">
                 <div class="nav-section">
                     <div class="nav-title">Event Intelligence</div>
-                    <a class="nav-item active" data-section-id="executive-brief">📋 Executive Brief</a>
+                    <a href="#" class="nav-item active" data-section-id="executive-brief">📋 Executive Brief</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">Essentials</div>
-                    <a class="nav-item" data-section-id="quick-start">⚡ Quick Start</a>
-                    <a class="nav-item" data-section-id="ecosystem">🌐 Ecosystem Strategy</a>
-                    <a class="nav-item" data-section-id="messaging">📢 Core Messaging</a>
+                    <a href="#" class="nav-item" data-section-id="quick-start">⚡ Quick Start</a>
+                    <a href="#" class="nav-item" data-section-id="ecosystem">🌐 Ecosystem Strategy</a>
+                    <a href="#" class="nav-item" data-section-id="messaging">📢 Core Messaging</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">Personas</div>
-                     <a class="nav-item" data-section-id="personas">🎯 Persona Intelligence</a>
+                     <a href="#" class="nav-item" data-section-id="personas">🎯 Persona Intelligence</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">Conversations</div>
-                    <a class="nav-item" data-section-id="pitches">💬 Elevator Pitches</a>
-                    <a class="nav-item" data-section-id="objections">🛡️ Objection Handlers</a>
-                    <a class="nav-item" data-section-id="discovery">🔍 Discovery Questions</a>
+                    <a href="#" class="nav-item" data-section-id="pitches">💬 Elevator Pitches</a>
+                    <a href="#" class="nav-item" data-section-id="objections">🛡️ Objection Handlers</a>
+                    <a href="#" class="nav-item" data-section-id="discovery">🔍 Discovery Questions</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">Competition & Partners</div>
-                    <a class="nav-item" data-section-id="competitors">⚔️ Battle Cards</a>
-                    <a class="nav-item" data-section-id="partners">🤝 Partner Talk Tracks</a>
+                    <a href="#" class="nav-item" data-section-id="competitors">⚔️ Battle Cards</a>
+                    <a href="#" class="nav-item" data-section-id="partners">🤝 Partner Talk Tracks</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">Demos & Execution</div>
-                    <a class="nav-item" data-section-id="demos">🎬 Demo Flows</a>
-                    <a class="nav-item" data-section-id="value">💰 Value & ROI</a>
-                    <a class="nav-item" data-section-id="closing">✨ Closing Strategies</a>
+                    <a href="#" class="nav-item" data-section-id="demos">🎬 Demo Flows</a>
+                    <a href="#" class="nav-item" data-section-id="value">💰 Value & ROI</a>
+                    <a href="#" class="nav-item" data-section-id="closing">✨ Closing Strategies</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">AI & Reference</div>
-                    <a class="nav-item" data-section-id="luminiq">🤖 LuminIQ & AI</a>
-                    <a class="nav-item" data-section-id="soundbites">💡 Key Soundbites</a>
-                    <a class="nav-item" data-section-id="metrics">📊 Success Metrics</a>
+                    <a href="#" class="nav-item" data-section-id="luminiq">🤖 LuminIQ & AI</a>
+                    <a href="#" class="nav-item" data-section-id="soundbites">💡 Key Soundbites</a>
+                    <a href="#" class="nav-item" data-section-id="metrics">📊 Success Metrics</a>
                 </div>
             </nav>
             
@@ -533,14 +353,14 @@
                     </div>
                     <div class="card">
                         <h3 class="card-title">✅ Strategic Partners (Not Competitors!)</h3>
-                        <div style="background: var(--dark-blue-accent); border: 2px solid var(--brand-green); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: var(--light-grey-text);">
+                        <div style="background: rgba(52, 211, 153, 0.1); border: 2px solid var(--brand-green); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
                             <p>These are PARTNERS. Never position against them. Always emphasize how we work together.</p>
                         </div>
                         <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.75rem; background: var(--dark-purple-accent); border-left: 4px solid var(--brand-green); border-radius: 4px; margin-bottom: 0.5rem; color: var(--light-grey-text);"><strong>Tipalti:</strong> NetSuite's 2024 Growth Partner - handles payments, we handle intelligence</li>
-                            <li style="padding: 0.75rem; background: var(--dark-purple-accent); border-left: 4px solid var(--brand-green); border-radius: 4px; margin-bottom: 0.5rem; color: var(--light-grey-text);"><strong>Airbase:</strong> Spend management partner - they manage workflows, we manage vendors</li>
-                            <li style="padding: 0.75rem; background: var(--dark-purple-accent); border-left: 4px solid var(--brand-green); border-radius: 4px; margin-bottom: 0.5rem; color: var(--light-grey-text);"><strong>Zone & Co:</strong> Financial automation partner - they close books, we ensure compliance</li>
-                            <li style="padding: 0.75rem; background: var(--dark-purple-accent); border-left: 4px solid var(--brand-green); border-radius: 4px; color: var(--light-grey-text);"><strong>Vertex/Avalara:</strong> Tax compliance partners - complete regulatory coverage together</li>
+                            <li style="padding: 0.75rem; background: var(--dark-bg); border-left: 4px solid var(--brand-green); border-radius: 4px; margin-bottom: 0.5rem;"><strong>Tipalti:</strong> NetSuite's 2024 Growth Partner - handles payments, we handle intelligence</li>
+                            <li style="padding: 0.75rem; background: var(--dark-bg); border-left: 4px solid var(--brand-green); border-radius: 4px; margin-bottom: 0.5rem;"><strong>Airbase:</strong> Spend management partner - they manage workflows, we manage vendors</li>
+                            <li style="padding: 0.75rem; background: var(--dark-bg); border-left: 4px solid var(--brand-green); border-radius: 4px; margin-bottom: 0.5rem;"><strong>Zone & Co:</strong> Financial automation partner - they close books, we ensure compliance</li>
+                            <li style="padding: 0.75rem; background: var(--dark-bg); border-left: 4px solid var(--brand-green); border-radius: 4px;"><strong>Vertex/Avalara:</strong> Tax compliance partners - complete regulatory coverage together</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -895,54 +715,49 @@
     </div>
     
     <script>
-        // --- Tab Functionality for Pitches Section ---
-        function showTab(tabId, button) {
-            const parentSection = button.closest('.content-section');
-            parentSection.querySelectorAll('.tab-content').forEach(tab => { tab.classList.remove('active'); });
-            parentSection.querySelectorAll('.tab-button').forEach(btn => { btn.classList.remove('active'); });
-            document.getElementById(tabId).classList.add('active');
-            button.classList.add('active');
-        }
-
-        // --- NEW: Section Navigation (Show/Hide Content) ---
         document.addEventListener('DOMContentLoaded', () => {
             const navItems = document.querySelectorAll('.sidebar .nav-item');
             const contentSections = document.querySelectorAll('.content-area .content-section');
+            const contentArea = document.querySelector('.content-area');
 
-            // Function to show a specific section
             function showContentSection(sectionId) {
-                // Deactivate all sections and nav items
+                if (!sectionId) return;
                 contentSections.forEach(section => section.classList.remove('active'));
                 navItems.forEach(item => item.classList.remove('active'));
-
-                // Activate the requested section
                 const targetSection = document.getElementById(sectionId);
                 if (targetSection) {
                     targetSection.classList.add('active');
-                    // Scroll to top of the content area when a new section is activated
-                    document.querySelector('.content-area').scrollTo(0, 0);
+                    contentArea.scrollTo(0, 0);
                 }
-
-                // Activate the corresponding nav item
                 const targetNavItem = document.querySelector(`.sidebar .nav-item[data-section-id="${sectionId}"]`);
                 if (targetNavItem) {
                     targetNavItem.classList.add('active');
                 }
             }
 
-            // Add click listeners to sidebar navigation items
             navItems.forEach(item => {
                 item.addEventListener('click', (event) => {
-                    event.preventDefault(); // Prevent default anchor link behavior
+                    event.preventDefault();
                     const sectionId = item.getAttribute('data-section-id');
                     showContentSection(sectionId);
                 });
             });
 
-            // Show the initial active section (e.g., Executive Brief) on load
-            // This assumes 'executive-brief' is the first active section
             showContentSection('executive-brief');
         });
+
+        function showTab(tabId, button) {
+            const parent = button.closest('.tab-content-wrapper'); // Use a wrapper if needed or scope to section
+            if (!parent) parent = button.closest('.content-section');
+            
+            parent.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            parent.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            
+            const targetContent = parent.querySelector(`#${tabId}`);
+            if(targetContent) targetContent.classList.add('active');
+            
+            button.classList.add('active');
+        }
     </script>
 </body>
 </html>
